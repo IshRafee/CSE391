@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch - Multiples of 3 Seconds</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="stopwatch-card">
+    <header class="card-header">
+      <h1 class="title">Stopwatch</h1>
+      <p class="subtitle">Counts in steps of 3 seconds (max 30s)</p>
+    </header>
+
+    <!-- Timer Display -->
+    <section class="display-container" aria-label="Stopwatch Timer Display">
+      <span id="display" class="time-value">0</span>
+      <span class="time-unit">s</span>
+    </section>
+
+    <!-- Status Message -->
+    <p id="status" class="status-message">Press "Start" to begin</p>
+
+    <!-- User Controls -->
+    <section class="controls-container" aria-label="Stopwatch Controls">
+      <button id="startBtn" class="btn btn-start" type="button">Start</button>
+      <button id="stopBtn" class="btn btn-stop" type="button">Stop</button>
+      <button id="resetBtn" class="btn btn-reset" type="button">Reset</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
