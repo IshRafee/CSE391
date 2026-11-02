@@ -1,0 +1,276 @@
+/* ==========================================================================
+   Fortune Generator Stylesheet
+   Designed for beginner front-end developers: Clean, semantic, and modular.
+   ========================================================================== */
+
+/* 1. Global Reset & Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Base Page Layout & Background */
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f0f4f8; /* Soft neutral backdrop with strong contrast */
+  color: #2d3748;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+/* 3. Header Styling */
+.header {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  max-width: 650px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.header .subtitle {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* 4. Main Section (Centered just above the footer) */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 20px 0 40px 0;
+}
+
+.interactive-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 5. Fortune Box & Buttons Layout Container */
+.fortune-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 720px;
+}
+
+/* 6. The Fortune Box Styling (Matching the prompt's reference output) */
+.fortune-box {
+  flex: 1;
+  background-color: #fced9b; /* Initial yellow background */
+  border: 3px solid #4f8b22; /* Initial green border */
+  border-radius: 4px;
+  padding: 24px 28px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Fortune Text Styling */
+#fortune-text {
+  color: #d12e1a; /* Initial red font color */
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  transition: color 0.3s ease, font-size 0.3s ease, font-family 0.3s ease;
+  user-select: none;
+}
+
+/* 7. The 4 Controls Beside the Fortune Box (2x2 Grid) */
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 42px);
+  grid-template-rows: repeat(2, 42px);
+  gap: 8px;
+  position: relative;
+}
+
+/* Base Button Styles */
+.palette-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.2s ease;
+  position: relative;
+}
+
+.palette-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+  filter: brightness(1.06);
+}
+
+.palette-btn:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.palette-btn:focus-visible {
+  outline: 2px solid #2b6cb0;
+  outline-offset: 2px;
+}
+
+/* The 4 Specific Colors from Reference Pic */
+.btn-green {
+  background-color: #63a73c; /* Top-Left: Green */
+}
+
+.btn-yellow {
+  background-color: #f7b416; /* Top-Right: Yellow */
+}
+
+.btn-blue {
+  background-color: #559be6; /* Bottom-Left: Blue */
+}
+
+.btn-orange {
+  background-color: #e97a34; /* Bottom-Right: Orange */
+}
+
+/* Tooltip on Button Hover for Accessibility and Usability */
+.btn-tooltip {
+  display: none;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2d3748;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.palette-btn:hover .btn-tooltip {
+  display: block;
+}
+
+/* 8. Guide Legend below controls */
+.guide-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-green { background-color: #63a73c; }
+.dot-yellow { background-color: #f7b416; }
+.dot-blue { background-color: #559be6; }
+.dot-orange { background-color: #e97a34; }
+
+/* 9. "Get Another Fortune" Action Button */
+.action-container {
+  margin-top: 24px;
+}
+
+.btn-new-fortune {
+  background-color: #2b6cb0;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(43, 108, 176, 0.25);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-new-fortune:hover {
+  background-color: #2c5282;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(43, 108, 176, 0.35);
+}
+
+.btn-new-fortune:active {
+  transform: translateY(1px);
+}
+
+/* 10. Footer (Positioned cleanly at bottom) */
+.footer {
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #718096;
+  font-size: 0.85rem;
+}
+
+/* 11. Responsive Design for Mobile Devices */
+@media (max-width: 620px) {
+  .fortune-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .fortune-box {
+    width: 100%;
+    min-height: 120px;
+    padding: 20px;
+  }
+
+  .controls-grid {
+    grid-template-columns: repeat(4, 46px);
+    grid-template-rows: 46px;
+  }
+
+  .palette-btn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+}
