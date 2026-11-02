@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-container">
+    <h2>📝 My To-Do List</h2>
+
+    <!-- Input Form Section -->
+    <div class="input-section">
+      <input type="text" id="task-input" placeholder="Add a new task..." />
+      <button id="add-btn">Add</button>
+    </div>
+
+    <!-- List of Tasks -->
+    <ul id="task-list"></ul>
+
+    <!-- Task Summary / Empty Message -->
+    <div class="footer-info">
+      <span id="task-counter">0 tasks remaining</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
