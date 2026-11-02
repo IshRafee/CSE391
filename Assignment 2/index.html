@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Fortune Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts for friendly, clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header class="header">
+    <h1>🔮 Fortune Generator</h1>
+    <p class="subtitle">ভাগ্যের লীলা খেলা</p>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <div class="interactive-section">
+      <!-- Container holding the fortune box and the four styling buttons -->
+      <div class="fortune-wrapper">
+        <!-- 1. The Fortune Box -->
+        <div id="fortune-box" class="fortune-box" role="region" aria-live="polite" aria-label="Your Fortune">
+          <p id="fortune-text">True wisdom comes not from knowledge, but from understanding.</p>
+        </div>
+
+        <!-- 2. Four Buttons Beside the Box (2x2 grid matching the prompt reference) -->
+        <div class="controls-grid" aria-label="Appearance Controls">
+          <!-- Button 1: Changes Font Color -->
+          <button 
+            id="btn-font-color" 
+            class="palette-btn btn-green" 
+            title="Change Font Color (Text)" 
+            aria-label="Change fortune text color">
+            <span class="btn-tooltip">Font Color</span>
+          </button>
+
+          <!-- Button 2: Changes Background Color of Fortune Box -->
+          <button 
+            id="btn-bg-color" 
+            class="palette-btn btn-yellow" 
+            title="Change Box Background Color" 
+            aria-label="Change fortune box background color">
+            <span class="btn-tooltip">Box Background</span>
+          </button>
+
+          <!-- Button 3: Changes Border Color of Fortune Box -->
+          <button 
+            id="btn-border-color" 
+            class="palette-btn btn-blue" 
+            title="Change Box Border Color" 
+            aria-label="Change fortune box border color">
+            <span class="btn-tooltip">Border Color</span>
+          </button>
+
+          <!-- Button 4: Changes Font Size and Font Family Slightly -->
+          <button 
+            id="btn-font-style" 
+            class="palette-btn btn-orange" 
+            title="Change Font Style & Size" 
+            aria-label="Change font size and font family">
+            <span class="btn-tooltip">Font Style</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Controls Legend / Guide for clarity -->
+      <div class="guide-legend">
+        <span class="legend-item"><span class="dot dot-green"></span> Text Color</span>
+        <span class="legend-item"><span class="dot dot-yellow"></span> Box Color</span>
+        <span class="legend-item"><span class="dot dot-blue"></span> Border Color</span>
+        <span class="legend-item"><span class="dot dot-orange"></span> Font Style & Size</span>
+      </div>
+
+      <!-- Extra Action: Get Another Random Fortune without full reload -->
+      <div class="action-container">
+        <button id="btn-new-fortune" class="btn-new-fortune">
+          🎲 Get Another Fortune
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Page Footer (The fortune box is positioned just above this footer as required) -->
+  <footer class="footer">
+    <p>© 2026 Fortune Generator • Created with HTML, CSS, and Vanilla JavaScript</p>
+  </footer>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
