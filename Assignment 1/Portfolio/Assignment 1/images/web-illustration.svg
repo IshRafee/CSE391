@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 330" role="img" aria-labelledby="title desc">
+  <title id="title">Creative coding illustration</title>
+  <desc id="desc">A stylized browser window with code lines, a purple cursor, and colorful abstract geometric decorations.</desc>
+  <defs><linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#efedff"/></linearGradient></defs>
+  <circle cx="455" cy="77" r="48" fill="#ff806e" opacity=".16"/><circle cx="85" cy="251" r="54" fill="#aee7d5" opacity=".75"/>
+  <path d="M55 76l21-25 20 25-20 25z" fill="#f4d77c"/><path d="M469 244l11-14 11 14-11 14z" fill="#7161ef"/>
+  <rect x="83" y="50" width="392" height="235" rx="19" fill="#7161ef" opacity=".14" transform="rotate(-3 279 168)"/>
+  <g transform="rotate(2 280 165)"><rect x="81" y="46" width="398" height="238" rx="18" fill="url(#screen)" stroke="#d8d3fb" stroke-width="2"/><path d="M81 64q0-18 18-18h362q18 0 18 18v28H81z" fill="#dfdcfb"/><circle cx="101" cy="69" r="5" fill="#ff806e"/><circle cx="119" cy="69" r="5" fill="#f4d77c"/><circle cx="137" cy="69" r="5" fill="#aee7d5"/><rect x="177" y="60" width="167" height="18" rx="9" fill="#fff" opacity=".9"/>
+  <rect x="108" y="119" width="135" height="9" rx="4.5" fill="#7161ef"/><rect x="108" y="143" width="210" height="7" rx="3.5" fill="#c7c3ec"/><rect x="108" y="161" width="183" height="7" rx="3.5" fill="#c7c3ec"/><rect x="132" y="190" width="123" height="7" rx="3.5" fill="#ff9d8f"/><rect x="132" y="208" width="190" height="7" rx="3.5" fill="#c7c3ec"/><rect x="132" y="226" width="145" height="7" rx="3.5" fill="#c7c3ec"/><path d="M111 142l8 7-8 7M118 156h10" fill="none" stroke="#7161ef" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="353" y="117" width="91" height="96" rx="12" fill="#e5f7f0"/><circle cx="399" cy="158" r="21" fill="#aee7d5"/><path d="M390 158l7 7 13-15" fill="none" stroke="#237a65" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="369" y="187" width="60" height="6" rx="3" fill="#83c9b3"/></g>
+  <path d="M415 221l33 28-17 4-8 16z" fill="#ff806e" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+</svg>
